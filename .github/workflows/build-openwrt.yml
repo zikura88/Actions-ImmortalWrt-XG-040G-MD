@@ -88,6 +88,7 @@ jobs:
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
+        tar zxvf $GITHUB_WORKSPACE/XG-040G-MD.tar.gz -C /workdir/openwrt
 
     - name: Enable build ccache
       uses: klever1988/cachewrtbuild@main
